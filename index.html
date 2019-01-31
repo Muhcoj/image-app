@@ -4,51 +4,127 @@
     <title>Test Page: Don't Panic</title>
     <meta charset="utf-8">
     <style type="text/css">
+      /* GLOBAL STYLES */
       a {
-        color: red;
+        color: #f00;
       }
-      #exec-bio {
-        background-color: lightgray;
+
+      div {
+        
       }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 7vw;
+        margin-top: 0;
+      }
+
+      h2 {
+      }
+
+      /* HERO STYLES */
+      .full-hero {
+        background-color: #c7dbfc; 
+        height: 50vh;
+        width: 50vw
+
+      }
+
+
+      /* SOCIAL STYLES */
+      .social-links {
+        background: rgba(150, 150, 150, 0.2);
+        color: rgba(0, 0, 255, 0.2);
+      }
+
+      /* BIO STYLES */
+
+      .bio-wrapper {
+       font-size: 24px;
+      }
+
       .bio-box {
-        border: 1px solid black;
+        border: 10px solid #000;
+        width: 50%;
+        font-size: 1rem;
       }
-      .bio-box a {
-        color: green;
+
+      .bio-box h3 {
+        font-size: 1.5em
       }
-      #main-link {
-        background-color: orange;
+
+      .bio-copy {
+        font-size: 1em;
       }
-      .background-bio-box {
-        background-color: azure;
+
+      .bio-copy a {
+        color: rgba(0, 102, 0, 1);
       }
+      
     </style>
   </head>
   <body>
-    <h1>I'm an h1</h1>
-    <ul>
-      <li>
-        <a href="http://example.com/" id="main-link">Link</a>
-      </li>
-      <li>
-        <a href="http://example.com/">Link</a>
-      </li>
-      <li>
-        <a href="http://example.com/">Link</a>
-      </li>
-    </ul>
+    <div class="full-hero hero-home">
+      <h1>I'm an h1</h1>
+      <ul>
+        <li>
+          <a href="http://example.com/" class="social-links">Link</a>
+        </li>
+        <li>
+          <a href="http://example.com/" class="social-links">Link</a>
+        </li>
+        <li>
+          <a href="http://example.com/" class="social-links">Link</a>
+        </li>
+      </ul>
+    </div>
     <h2>I'm an h2</h2>
-    <div id="exec-bio" class="bio-box background-bio-box">
-      <a href="http://example.com/">I'm a link</a>
-    </div>
-    <div class="bio-box background-bio-box">
-      <a href="http://example.com/">I'm a link</a>
-    </div>
-    <div class="bio-box background-bio-box">
-      <a href="http://example.com/">I'm a link</a>
-    </div>
-    <div class="bio-box background-bio-box">
-      <a href="http://example.com/">I'm a link</a>
+    <div class="bio-wrapper">
+      <div class="bio-box">
+        <h3>Johnny Heitje</h3>
+        <a href="http://example.com/" class="social-links">here</a>
+        <div class="bio-copy">
+          <p>
+          Known for his eagle eyes and rapier wit, Johhny is the 
+          photographer for <a href="http://example.com/">The Photobox</a>
+          and writer of <a href="http://example.com/">The Photoblog</a>.
+        </p>
+        </div>
+      </div>
+      <div class="bio-box">
+        <h3>Pip d'Angelo</h3>
+        <a href="http://example.com/" class="social-links">here</a>
+        <div class="bio-copy">
+          <p>
+            When he is not designing, he is swimming with sharks or building 
+            houses of cards. He has infectious humor and is a front-end specialist.
+          </p>
+        </div>
+      </div>
+      <div class="bio-box">
+        <h3>Bob Dordogne</h3>
+        <a href="http://example.com/" class="social-links">here</a>
+        <div class="bio-copy">
+          <p>
+            You may have heard him on Alexanderplatz playing the banjo, but 
+            rest assured Bob is a monster developer. He just loves the beautiful 
+            thing in life. 
+          </p>
+        </div>
+      </div>
+      <div class="bio-box">
+        <h3>Scrappy the house dog</h3>
+        <a href="http://example.com/" class="social-links">here</a>
+        <div class="bio-copy">
+          <p>
+            Woof!
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
