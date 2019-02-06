@@ -13,8 +13,16 @@ h1 {
   margin-top: 0;
 }
 
+h2 {
+  font-size: 2em;
+}
+
 a {
-  color: #f00;
+  color: #6397b5;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* HEADER STYLES */
@@ -89,6 +97,7 @@ a {
 /* FOOTER STYLES */
 .footer {
   background-color: #000;
+  position: relative;
   padding: 10vh 0 15vh;
   text-align: center;
 }
@@ -117,20 +126,79 @@ a {
 }
 
 /* HERO STYLES */
-.full-hero {
-  background-color: #c7dbfc; 
-  height: 50vh;
+.full-hero { 
+  background-color: #c7dbfc;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+.full-hero:after {
+/*  border: 10px solid;
+  border-color: #fff transparent transparent;
+  bottom: 2vh;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0; 
+
+  The styling above creates a browser triangle*/
+
+  bottom: 5vh;
+  color: #fff;
+  content: "﹀";
+  font-size: 48px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+
+.hero-home {
+  background-image: url(/images/breaktime.jpg);
+  background-position: 15%;  /*change the anchor point for background-img*/
+}
+
+.hero-content {
+  color: #fff;
   position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em
+}
+
+.hero-content .social-links {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #017387;
+}
+
+.hero-content .social-links:hover {
+  background-color: #017387;
+  color: #fff;
 }
 
 
 /* SOCIAL STYLES */
 .social-list {
   list-style: none;
-  padding: 0;
-  text-align: right;
-  position: absolute;
+}
+
+.hero-social-list {
+  text-align: center;
   bottom: 15px;
+}
+
+.footer-social-list {
+  margin-top: 1vh;
 }
 
 .social-links {
@@ -153,12 +221,40 @@ a {
 
 .social-links:hover, 
 .social-links:active {
-  background: #34cc5f80;
+  background: #ed6e2f;
 }
 
 .social-list > li {
   display: inline-block;
   margin: 0 0.5em;
+}
+
+/* HOMEPAGE STYLES */
+.home-section {
+  margin: 6rem auto;
+  max-width: 980px;
+  width: 90vw;
+}
+
+.home-section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;  
+}
+
+.home-callout {
+  background-color: #000;
+  color: #fff;
+  padding: 7vh 0;
+}
+
+.callout-title {
+  font-style: 5.75vw;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.callout-copy {
+  font-size: 0.8rem;
 }
 
 /* BIO STYLES */
@@ -180,14 +276,12 @@ a {
 }
 
 .bio-box {
-  border: 1px solid #000;
-  border-color: transparent black black transparent;
   box-sizing: border-box;
-  font-size: 1rem;
   float: left;
-  margin: 40px 1% 0;
-  padding: 0 2% 2%;
-  width: 23%;
+  font-size: 1rem;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 
 .bio-box h3 {
@@ -195,6 +289,7 @@ a {
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .bio-box img {
@@ -202,17 +297,16 @@ a {
 }
 
 .bio-box > a {
-  color: #c68bf9;
+  color: #fff;
 }
 
 .bio-box .social-links {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 
 .bio-copy {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.75em;
 }
 
 .bio-copy a {
