@@ -1,5 +1,6 @@
 ---
 layout: default
+description: A website about the oceans and the human interaction with it.
 ---
 
 <div class="home">
@@ -46,16 +47,39 @@ layout: default
   </div>
 
   <div class="home-section">
-    <h2>The Founders</h2>
-    <p>
-      The Story was founded in 2010 by Johnny Heitje, Pip d'Angelo and Bob Dordogne. We believe that the kind of technical sophistication taught by The Story tutorials can benefit at least a billion people, and probably more.
-    </p>
+    <h4>Most Recent Post</h4>
+    <div class="blog-posts">
+      <header class="post-header">
+        <h2>
+          <a href="{{ site.posts.first.url }}">
+          {{ site.posts.first.title }}</a>
+        </h2>
+        <div>
+          <img src="{{ site.posts.first.gravatar }}">
+          <a href="{{ site.posts.first.authorTwitter }}"
+          class="social-links"><i class="fab fa-twitter"></i></a>
+          <span> - {{ site.posts.first.date | date: '%B %d, %Y' }}</span>
+        </div>
+      </header>
+      <div class="posts-image"
+      style="background-image:url({{ site.posts.first.postHero }})"></div>
+      {{ site.posts.first.excerpt }}  
+    </div>
+
+    
+
+    <div class="home-about">
+      <h2>The Founders</h2>
+      <p>
+        The Story was founded in 2010 by Johnny Heitje, Pip d'Angelo and Bob Dordogne. We believe that the kind of technical sophistication taught by The Story tutorials can benefit at least a billion people, and probably more.
+      </p>
+    </div>
 
     <div class="bio-wrapper">
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Johnny Heitje</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
           Known for his eagle eyes and rapier wit, Johhny is the 
@@ -67,7 +91,7 @@ layout: default
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Pip d'Angelo</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
             When he is not designing, he is swimming with sharks or building 
@@ -78,7 +102,7 @@ layout: default
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Bob Dordogne</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
             You may have heard him on Alexanderplatz playing the banjo, but 

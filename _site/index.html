@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Test Page: Don't Panic</title>
+  
+    <title>Test Page: Don't Panic</title>
+  
+  
+    <meta name="description" content="A website about the oceans and the human interaction with it.">
+  
+  <link href="/favicon.png" rel="icon">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" 
+        rel="stylesheet">
+  <link rel="stylesheet" type="text/css" 
+        href="/fonts/fontawesome-free-5.7.2-web/css/all.css">
   <link rel="stylesheet" type="text/css" href="/css/reset.css">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
   <body>
     <header class="header">
   <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
     <ul class="header-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="#">Nav 2</a></li>
-<li><a href="#">Nav 3</a></li>
+<li class="dropdown">
+  <a class="drop-trigger" href="/blog">Blog</a>
+  <ul class="drop-menu">
+    <li>Recent Posts</li>
+    
+      <li><a href="/2019/02/08/title-of-third-post.html">This is the title of the third post</a></li>
+    
+      <li><a href="/2019/02/07/title-of-second-post.html">This is the title of the second post</a></li>
+    
+      <li><a href="/2019/02/06/title-of-post.html">This is the title of the post</a></li>
+    
+  </ul>
+</li>
+<li><a href="/2019/02/08/title-of-third-post.html">Newest Post</a></li>
     </ul>
   </nav>
   <a href="/" class="header-logo">
@@ -29,13 +55,19 @@
       <h1>ONLY THE OCEAN</h1>
       <ul class="social-list hero-social-list">
         <li>
-  <a href="http://example.com/" class="social-links">Fb</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-facebook-f"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-links">Tw</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-twitter"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-links">Gh</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-github"></i>
+  </a>
 </li>
       </ul>
     </div>
@@ -75,16 +107,41 @@
   </div>
 
   <div class="home-section">
-    <h2>The Founders</h2>
-    <p>
-      The Story was founded in 2010 by Johnny Heitje, Pip d'Angelo and Bob Dordogne. We believe that the kind of technical sophistication taught by The Story tutorials can benefit at least a billion people, and probably more.
-    </p>
+    <h4>Most Recent Post</h4>
+    <div class="blog-posts">
+      <header class="post-header">
+        <h2>
+          <a href="/2019/02/08/title-of-third-post.html">
+          This is the title of the third post</a>
+        </h2>
+        <div>
+          <img src="https://www.gravatar.com/avatar/HASH">
+          <a href="http://twitter.com/"
+          class="social-links"><i class="fab fa-twitter"></i></a>
+          <span> - February 08, 2019</span>
+        </div>
+      </header>
+      <div class="posts-image"
+      style="background-image:url(/images/small/winter-ocean.jpg)"></div>
+      <p>In the 4th Century A.C., the Church Fathers stole the secret word of the <em>Ancient Masters</em>, which symbolized the four cosmic principles of creation, changed the meaning of the “Secret Word” to indicate their God, then destroyed the ancient mysteries and the ancient literature to hide their crime, and slaughtered more than seventy million people to make the work believe in the fraud that evolved into Christianity.</p>
+
+  
+    </div>
+
+    
+
+    <div class="home-about">
+      <h2>The Founders</h2>
+      <p>
+        The Story was founded in 2010 by Johnny Heitje, Pip d'Angelo and Bob Dordogne. We believe that the kind of technical sophistication taught by The Story tutorials can benefit at least a billion people, and probably more.
+      </p>
+    </div>
 
     <div class="bio-wrapper">
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Johnny Heitje</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
           Known for his eagle eyes and rapier wit, Johhny is the 
@@ -96,7 +153,7 @@
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Pip d'Angelo</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
             When he is not designing, he is swimming with sharks or building 
@@ -107,7 +164,7 @@
       <div class="bio-box">
         <img src="http://placekitten.com/g/400/400">
         <h3>Bob Dordogne</h3>
-        <a href="http://example.com/" class="social-links">Tw</a>
+        <a href="http://example.com/" class="social-links"><i class="fab fa-twitter"></i></a>
         <div class="bio-copy">
           <p>
             You may have heard him on Alexanderplatz playing the banjo, but 
@@ -130,20 +187,38 @@
     <ul class="footer-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
-<li><a href="#">Nav 2</a></li>
-<li><a href="#">Nav 3</a></li>
+<li class="dropdown">
+  <a class="drop-trigger" href="/blog">Blog</a>
+  <ul class="drop-menu">
+    <li>Recent Posts</li>
+    
+      <li><a href="/2019/02/08/title-of-third-post.html">This is the title of the third post</a></li>
+    
+      <li><a href="/2019/02/07/title-of-second-post.html">This is the title of the second post</a></li>
+    
+      <li><a href="/2019/02/06/title-of-post.html">This is the title of the post</a></li>
+    
+  </ul>
+</li>
+<li><a href="/2019/02/08/title-of-third-post.html">Newest Post</a></li>
     </ul>
   </nav>
   <h3>Learn Enough <span>to Be Dangerous</span></h3>
   <ul class="social-list footer-social-list">
     <li>
-  <a href="http://example.com/" class="social-links">Fb</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-facebook-f"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-links">Tw</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-twitter"></i>
+  </a>
 </li>
 <li>
-  <a href="http://example.com/" class="social-links">Gh</a>
+  <a href="http://example.com/" class="social-links">
+    <i class="fab fa-github"></i>
+  </a>
 </li>
   </ul>
 </footer>
